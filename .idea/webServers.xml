@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6d636ae4-decd-41bb-b6f9-873eaa3060d4" name="sealscript" url="http://172.16.8.72:8000">
+        <fileTransfer host="172.16.8.72" port="22" rootFolder="/home/hairuo/project/sealscript" accessType="SFTP" username="hairuo">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

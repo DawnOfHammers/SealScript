@@ -1,0 +1,164 @@
+
+
+body{
+    background-color: #EEEEEE;
+    height: auto;
+    font-family: Quicksand;
+
+
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.projects{
+    margin-top: 20px;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 150%;
+    color: dimgrey;
+    background-color: #E6E6E6;
+}
+
+.projects:hover{
+    cursor: pointer;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    background-color: #EEEEEE;
+}
+
+
+.navigation{
+    margin-top: 5%;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-color: darkgrey;
+}
+
+.words{
+    align-self: center;
+    height: 100px;
+    width: 100%;
+    text-align:  center;
+    line-height: 130px;
+    flex-grow: 1;
+    font-size: 250%;
+    font-family: Raleway;
+}
+
+.name{
+    align-self: flex-end;
+}
+
+.button{
+    height: 75px;
+    width: 100px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 75%;
+}
+
+
+
+.banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+}
+
+.button:hover{
+    cursor: pointer;
+    color: grey;
+    transition: 0.5s;
+}
+
+.logo{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+}
+
+.bannerText{
+    line-height: 400px;
+    color: white;
+    font-size: 200%;
+}
+
+
+
+.socialMediaLogo {
+    align-self: flex-end;
+    background-color: aquamarine;
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    position: relative;
+    -webkit-transition: all linear 200ms;
+    -moz-transition: all linear 200ms;
+    -o-transition: all linear 200ms;
+    transition: all linear 200ms;
+}
+
+.socialMediaLogo img{
+    height: auto;
+    width: 100%;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all linear 200ms;
+    -moz-transition: all linear 200ms;
+    -o-transition: all linear 200ms;
+    transition: all linear 200ms;
+}
+
+
+
+.socialMediaLogo img:first-child{
+    opacity: 1;
+}
+
+.socialMediaLogo:hover img:first-child + img {
+    opacity: 1;
+}
+
+.socialMediaLogo:hover {
+    cursor: pointer;
+}
