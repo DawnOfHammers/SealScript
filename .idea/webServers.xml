@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="6d636ae4-decd-41bb-b6f9-873eaa3060d4" name="sealscript" url="http://172.16.8.72:8000">
-        <fileTransfer host="192.168.12.109" port="22" rootFolder="/home/kevin/sealscript/sealscript" accessType="SFTP" username="kevin">
+        <fileTransfer host="192.168.12.109" port="22" rootFolder="/home/kevin/sealscript/sealscript" accessType="SFTP" password="df9adf98df9cdf92df9edf9bdf99df93df9ddf9fdfe3dfe6dfe6" username="kevin">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
