@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags wagtailimages_tags %}
-{% block body_class %}template-homepage{% endblock %}
+{% block body_class %}template-project1{% endblock %}
 {% load staticfiles %}
 {% block content %}
 <head>
@@ -10,10 +10,14 @@
 </head>
 <body>
 <div class  = "header">
+    <div class = "words">
+        {{ page.title }}
+    </div>
+
     <div class = "logo">
         <div class = "logoContainer">
-            {% if page.logo %}
-            {% image page.logo width-400 %}
+            {% if homepage.logo %}
+            {% image homepage.logo width-400 %}
             {% endif %}
         </div>
     </div>
@@ -31,25 +35,14 @@
             <div onclick="clickFunction()" class="button">OUR PROJECTS</div>
             <div id="projectDropdown" class="dropdown-content">
                 {% for page in self.get_children.specific %}
-                    <a href={{page.url}}>{{page.title}}</a>
-                    {% image page.representative_image width-400 %}
+                <a href={{page.url}}>{{page.title}}</a>
+                {% image page.representative_image width-400 %}
                 {% endfor %}
             </div>
         </div>
     </div>
 </div>
-<div class = "banner">
-    <div class = "bannerText">{{ page.title }}</div>
-</div>
-<div class = "content">
-    {% for page in self.get_children.specific %}
-        <div class = "projects">
-            {% for ch in page.title %}
-                {{ch}}
-            {% endfor %}
-        </div>
-    {% endfor %}
-</div>
+
 </body>
 {% endblock %}
 
