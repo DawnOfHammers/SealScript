@@ -4,8 +4,6 @@ body{
     background-color: #EEEEEE;
     height: auto;
     font-family: Quicksand;
-
-
 }
 
 .home-content{
@@ -232,10 +230,6 @@ body{
 
 h1 {
     font-family: "Open Sans",sans-serif;
-    font-size: 39px;
-    letter-spacing: 1px;
-    font-family: "Open Sans";
-    font-size: 22px;
     line-height: 1.2em;
     text-transform: uppercase;
     text-decoration: none;
@@ -249,10 +243,6 @@ h1 {
 
 h2 {
     font-family: "Open Sans",sans-serif;
-    font-size: 21px;
-    text-transform: uppercase;
-    line-height: 1.2em;
-    font-family: "Open Sans";
     font-size: 14px;
     line-height: 1.8em;
     text-transform: none;
