@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags wagtailimages_tags %}
-{% block body_class %}template-homepage{% endblock %}
+{% block body_class %}template-project1{% endblock %}
 {% load staticfiles %}
 {% block content %}
 <head>
@@ -13,6 +13,7 @@
     <div class = "words">
         {{ page.title }}
     </div>
+
     <div class = "logo">
         <div class = "logoContainer">
             <a href=/#>
@@ -21,35 +22,43 @@
         </div>
     </div>
 
+    <!-- <div class = "logoContainer">
+        <div class = "socialMediaLogo"><img src = "{% static "assets/gFacebook.png" %}"/> <img src = "{% static "assets/Facebook.png" %}"/></div>
+        <div class = "socialMediaLogo"><img src = "{% static "assets/gTwitter.png" %}"/><img src = "{% static "assets/Twitter.png" %}"/></div>
+        <div class = "socialMediaLogo"><img src = "{% static "assets/gGoogle+.png" %}"/><img src = "{% static "assets/Google+.png" %}"/></div>
+    </div> -->
+
     <div class = "navigation">
         <a href=/contact-us/><div class = "button">CONTACT US</div></a>
         <a href=/about-us/><div class = "button">ABOUT US</div></a>
         <div class = "dropdown">
             <div onclick="clickFunction()" class="button">OUR PROJECTS</div>
             <div id="projectDropdown" class="dropdown-content">
-                {% for page in self.get_children.specific %}
-                    {% if page.project_page %}
-                        <a href={{page.url}}>{{page.title}}</a>
-                    {% endif %}
+                {% for page in self.get_parent.get_children.specific %}
+                {% if page.project_page %}
+                <a href={{page.url}}>{{page.title}}</a>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
     </div>
-    <div class = "banner">
-        <div class = "bannerText">{{ page.title }}</div>
+</div>
+
+<div class = "col sqs-col-3 span-3">
+    <h1 class = "text-align-center">{{page.title}}</h1>
+    <h2 class = "text-align-center">__</h2>
+    <h2 class = "text-align-center">{{page.body|richtext}}</h2>
+</div>
+<div class = "content">
+</div>
+<div class = "content">
+    <div>
+        {% if page.company_image %}
+        {% image page.company_image width-650 %}
+        {% endif %}
     </div>
 </div>
-<div class = "home-content">
-    {% for page in self.get_children.specific %}
-        {% if page.project_page %}
-            <div class = "projects">
-                {% for ch in page.title %}
-                    {{ch}}
-                {% endfor %}
-            </div>
-        {% endif %}
-    {% endfor %}
-</div>
+
 </body>
 {% endblock %}
 

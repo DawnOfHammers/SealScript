@@ -16,9 +16,9 @@
 
     <div class = "logo">
         <div class = "logoContainer">
-            {% if homepage.logo %}
-            {% image homepage.logo width-400 %}
-            {% endif %}
+            <a href=/#>
+                <img src = "{% static "assets/logo.png" %}"/>
+            </a>
         </div>
     </div>
 
@@ -29,20 +29,29 @@
     </div> -->
 
     <div class = "navigation">
-        <div class = "button">CONTACT US</div>
-        <div class = "button">ABOUT US</div>
+        <a href=/contact-us/><div class = "button">CONTACT US</div></a>
+        <a href=/about-us/><div class = "button">ABOUT US</div></a>
         <div class = "dropdown">
             <div onclick="clickFunction()" class="button">OUR PROJECTS</div>
             <div id="projectDropdown" class="dropdown-content">
-                {% for page in self.get_children.specific %}
+                {% for page in self.get_parent.get_children.specific %}
+                {% if page.project_page %}
                 <a href={{page.url}}>{{page.title}}</a>
-                {% image page.representative_image width-400 %}
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
     </div>
+    <div class = "banner">
+        {% if page.projectImage %}
+            {% image page.projectImage width-400 %}
+        {% endif %}
+    </div>
 </div>
-
-</body>
+<div class = "col sqs-col-6 span-6">
+    <h1 class = "text-align-center">{{page.title}}</h1>
+    <h2 class = "text-align-center">__</h2>
+    <h2>{{page.body|richtext}}</h2>
+</div>
 {% endblock %}
 
