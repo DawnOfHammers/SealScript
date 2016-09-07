@@ -43,17 +43,20 @@
         </div>
     </div>
 </div>
-<div>
-    <form action="" method="POST" enctype="multipart/form-data">
-        <input name="action" value="submit" type="hidden"> Your name:<br>
-        <input name="name" size="30" type="text"><br> Your email:<br>
-        <input name="email" size="30" type="text"><br> Your message:<br>
-    <textarea name="message" rows="7" cols="30">
-    </textarea><br>
-        <input value="Send email" type="submit">
-    </form>
-</div>
-
+<html>
+<head>
+    <title>{{ self.title }}</title>
+</head>
+<body>
+<h1>{{ self.title }}</h1>
+{{ self.intro|richtext }}
+<form action="{% pageurl self %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+</form>
+</body>
+</html>
 </body>
 {% endblock %}
 
