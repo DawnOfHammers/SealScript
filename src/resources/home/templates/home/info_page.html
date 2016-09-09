@@ -48,14 +48,12 @@
     <h1 class = "text-align-center">{{page.title}}</h1>
     <h2 class = "text-align-center">__</h2>
     <h2 class = "text-align-center">{{page.body|richtext}}</h2>
-</div>
-<div class = "content">
-</div>
-<div class = "content">
-    <div>
-        {% if page.company_image %}
-        {% image page.company_image width-650 %}
-        {% endif %}
+    <div class = "content">
+        <div>
+            {% if page.company_image %}
+            {% image page.company_image width-650 %}
+            {% endif %}
+        </div>
     </div>
 </div>
 
